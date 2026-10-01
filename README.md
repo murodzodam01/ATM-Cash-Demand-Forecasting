@@ -111,7 +111,7 @@ In an operational deployment, model selection should go beyond MAE alone: foreca
 
 ## Installation
 
-ETNA 3 currently requires **Python 3.10вЂ“3.12**. Python 3.12 is recommended for reproducing the notebook.
+ETNA 3 currently requires **Python 3.10-3.12**. Python 3.12 is recommended for reproducing the notebook.
 
 ```bash
 python -m venv .venv
@@ -154,7 +154,7 @@ Potential extensions include multi-ATM hierarchical forecasting, probabilistic p
 
 ## Tech stack
 
-`Python` В· `pandas` В· `NumPy` В· `ETNA` В· `Prophet` В· `CatBoost` В· `scikit-learn` В· `statsmodels` В· `Matplotlib` В· `Seaborn` В· `Plotly`
+`Python` · `pandas` · `NumPy` · `ETNA` · `Prophet` В· `CatBoost` · `scikit-learn` · `statsmodels` · `Matplotlib` · `Seaborn` · `Plotly`
 
 ## Author
 
