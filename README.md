@@ -1,4 +1,4 @@
-# ATM Cash Demand Forecasting
+﻿# ATM Cash Demand Forecasting
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![ETNA](https://img.shields.io/badge/ETNA-3.0-6A5ACD)
@@ -7,7 +7,7 @@
 
 An end-to-end time-series forecasting project for estimating five-day ATM cash demand. The analysis compares statistical, machine-learning, hierarchical, recursive, direct, hybrid, and ensemble forecasting approaches using daily deposits, withdrawals, and net cash flow.
 
-[Explore the complete notebook](./ATM_Cash_Demand_Forecasting%20%281%29.ipynb)
+[Explore the complete notebook](./ATM_Cash_Demand_Forecasting.ipynb)
 
 ## Business problem
 
@@ -44,13 +44,13 @@ flowchart TD
 
 The notebook covers:
 
-1. **Exploratory analysis** — missingness, descriptive statistics, temporal patterns, weekday effects, distributions, and correlations.
-2. **ETNA dataset construction** — conversion of deposits, withdrawals, and net cash flow into a multi-segment `TSDataset`.
-3. **Data-quality treatment** — seven-day seasonal imputation, mean fallback imputation, and local density-based anomaly detection.
-4. **Time-series diagnostics** — ACF, PACF, STL decomposition, and periodogram analysis.
-5. **Feature engineering** — lagged values, trend, calendar variables, salary-cycle proxies, and decomposition features.
-6. **Model comparison** — Prophet, linear regression, CatBoost, recursive and direct pipelines, a hybrid strategy, and weighted voting.
-7. **Hierarchical forecasting** — bottom-up reconciliation of deposits and withdrawals into a coherent net position.
+1. **Exploratory analysis** вЂ” missingness, descriptive statistics, temporal patterns, weekday effects, distributions, and correlations.
+2. **ETNA dataset construction** вЂ” conversion of deposits, withdrawals, and net cash flow into a multi-segment `TSDataset`.
+3. **Data-quality treatment** вЂ” seven-day seasonal imputation, mean fallback imputation, and local density-based anomaly detection.
+4. **Time-series diagnostics** вЂ” ACF, PACF, STL decomposition, and periodogram analysis.
+5. **Feature engineering** вЂ” lagged values, trend, calendar variables, salary-cycle proxies, and decomposition features.
+6. **Model comparison** вЂ” Prophet, linear regression, CatBoost, recursive and direct pipelines, a hybrid strategy, and weighted voting.
+7. **Hierarchical forecasting** вЂ” bottom-up reconciliation of deposits and withdrawals into a coherent net position.
 
 ## Feature engineering
 
@@ -107,11 +107,11 @@ Based on the backtests, the strongest candidate design is:
 - **Withdrawals:** recursive linear forecasting.
 - **Net cash flow:** recursive linear forecasting, or reconciliation of the selected component forecasts when accounting coherence is required.
 
-In an operational deployment, performance should be monitored separately by segment and forecast horizon, then translated into cash-replenishment decisions using shortage and idle-cash costs.
+In an operational deployment, model selection should go beyond MAE alone: forecasts should be monitored by segment and horizon and translated into cash-replenishment decisions using the asymmetric costs of shortages and excess idle cash.
 
 ## Installation
 
-ETNA 3 currently requires **Python 3.10–3.12**. Python 3.12 is recommended for reproducing the notebook.
+ETNA 3 currently requires **Python 3.10вЂ“3.12**. Python 3.12 is recommended for reproducing the notebook.
 
 ```bash
 python -m venv .venv
@@ -136,7 +136,7 @@ Although the distribution is installed as `ts-etna`, it is imported in Python as
 4. Open the notebook:
 
    ```bash
-   jupyter notebook "ATM_Cash_Demand_Forecasting (1).ipynb"
+   jupyter notebook ATM_Cash_Demand_Forecasting.ipynb
    ```
 
 5. Run the notebook from top to bottom. The dataset is downloaded automatically.
@@ -154,8 +154,9 @@ Potential extensions include multi-ATM hierarchical forecasting, probabilistic p
 
 ## Tech stack
 
-`Python` · `pandas` · `NumPy` · `ETNA` · `Prophet` · `CatBoost` · `scikit-learn` · `statsmodels` · `Matplotlib` · `Seaborn` · `Plotly`
+`Python` В· `pandas` В· `NumPy` В· `ETNA` В· `Prophet` В· `CatBoost` В· `scikit-learn` В· `statsmodels` В· `Matplotlib` В· `Seaborn` В· `Plotly`
 
 ## Author
 
 **Muhammad Murodzoda**
+
